@@ -1,0 +1,11 @@
+{
+  "name": "mp3-player",
+  "version": "1.0.0",
+  "description": "Just a cool mp3 player I designed",
+  "main": "data.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Hemant Parashar",
+  "license": "MIT"
+}

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hemant Parashar : Front-End Designer and Developer</title>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<link href='styles/styles.css' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+<style>
+
+</style>
+</head>
+<body>
+	<div id="container">
+
+		<div id="mp3player-base">
+			
+			<div id="mp3player">
+				<div id="album-cover"></div>
+
+				<div id="functions">
+
+						<div id="controls">
+							
+							<div id="buttons">
+
+								<div id="previous"><i class="fa fa-step-backward"></i></div>
+								<div id="play-pause">
+									<div id="play"><i class="fa fa-play"></i></div>
+									<div id="pause"><i class="fa fa-pause"></i></div>
+								</div>	
+								<div id="stop"><i class="fa fa-stop"></i></div>
+								<div id="next"><i class="fa fa-step-forward"></i></div>
+
+							</div>
+
+							<div id="loop">
+								<div id="repeat"><i class="fa fa-repeat"></i></div>
+								<div id="list"><i class="fa fa-list"></i></div>
+							</div>
+
+						</div>
+
+						<div id="duration">
+
+							<div id="progress">
+								<span id="timer">0:00</span>
+								<div id="progress-slide"></div>
+								<span id="totalDuration">0:00</span>
+							</div>
+
+							<div id="volume">
+								<div id="mute"><i class="fa fa-volume-off"></i></div>
+								<div id="full-vol"><i class="fa fa-volume-up"></i></div>
+							</div>
+
+						</div>
+				</div>
+			</div>
+
+			<div id="playlist">
+				<div id="close"><span>+</span></div>
+				<div id="overlayNotClickable"></div>
+				<ul id="songs">
+					
+				</ul>	
+			</div>
+
+
+		</div>
+
+	</div>
+
+<script id="template1" type="text/x-handlebars-template">
+		{{#each this}}
+		<li data-link="{{link}}">
+			<div class="playlistImg"><img class="center" src="{{songImg}}"/></div>
+			<div class="title">	
+				<h1>{{name}}</h1>
+				<h3>{{artist}}</h3>
+			</div>
+			<div class="icons">
+				<i class="fa fa-play"></i>
+				<i class="fa fa-pause"></i>
+			</div>
+		</li>
+		{{/each}}
+</script>
+
+<script id="template2" type="text/x-handlebars-template">
+		{{#each this}}
+			<div class="cover" style="background:url({{coverImg}});"></div>
+		{{/each}}
+		<div id="song-info">
+				<h2 id="songTitle"></h2>
+				<h3 id="songArtist"></h3>
+		</div>	
+				
+		<div id="song-img">
+			{{#each this}}
+			<div class="songImg" style="background:url({{songImg}});"></div>
+			{{/each}}			
+		</div>
+		<div id="gradient"></div>		
+</script>
+
+<script src="vendors/jquery.js"></script>
+<script src="vendors/jqui.js"></script>
+<script src="vendors/handlebars.js"></script>
+<script src="scripts/data.js"></script>
+<script src="scripts/script.js"></script>		
+</body>
+</html>
