@@ -1,6 +1,9 @@
 # music-player
 A simple music player that I designed
 
+![alt text](https://raw.githubusercontent.com/hemantparashar/music-player/master/img.png)
+
+
 ## Tech
 
 This project uses a number of open source projects to work properly:
